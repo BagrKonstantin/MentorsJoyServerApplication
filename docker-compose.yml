@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  mentors_joy_data_base:
+    image: bagrkonstantin/mentors-joy-db:latest
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - "${POSTGRES_PORT_PUBLIC}:${POSTGRES_PORT_DOCKER}"
+
+  mentors_joy_generator:
+    image: bagrkonstantin/mentors-joy-generator:latest
+    environment:
+      PORT: ${GENERATOR_PORT_DOCKER}
+    ports:
+      - "${GENERATOR_PORT_PUBLIC}:${GENERATOR_PORT_DOCKER}"
+
+  mentors_joy_rest_api:
+    image: bagrkonstantin/mentors-joy-api:latest
+    depends_on:
+      - mentors_joy_data_base
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://mentors_joy_data_base:${POSTGRES_PORT_DOCKER}/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      SERVER_PORT: ${API_PORT_PUBLIC}
+      MENTORSJOY_APP_JWTSECRET: ${JWT_TOKEN}
+      MENTORSJOY_APP_JWTEXPIRATIONMS: ${JWT_TOKEN_EXP}
+      MENTORSJOY_GENERATOR_ADDRESS: http://mentors_joy_generator:${GENERATOR_PORT_DOCKER}
+
+
+    ports:
+      - "${API_PORT_PUBLIC}:${API_PORT_DOCKER}"

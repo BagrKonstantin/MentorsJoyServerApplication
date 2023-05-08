@@ -1,0 +1,700 @@
+2023-05-03 19:25:07,778 - [INFO] - 200 GET /h (::1) 1.00ms
+2023-05-03 19:25:08,081 - [WARNING] - 404 GET /favicon.ico (::1) 0.99ms
+2023-05-03 19:39:24,594 - [INFO] - 200 POST /h (::1) 1.00ms
+2023-05-03 21:42:03,532 - [WARNING] - 405 POST /api/app/technical_assignment/generate (::1) 5.00ms
+2023-05-03 21:43:01,412 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 21:43:01,435 - [ERROR] - 500 POST /generate_document (127.0.0.1) 24.01ms
+2023-05-03 21:43:39,797 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 21:43:39,798 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.60ms
+2023-05-03 21:44:06,999 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 21:44:07,000 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.08ms
+2023-05-03 22:06:56,282 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 22:06:56,283 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.12ms
+2023-05-03 22:08:04,829 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 22:08:04,830 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.07ms
+2023-05-03 22:08:16,653 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 22:08:16,653 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.08ms
+2023-05-03 22:31:22,425 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 22:31:22,426 - [ERROR] - 500 POST /generate_document (127.0.0.1) 2.68ms
+2023-05-03 23:24:41,487 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 23:24:41,489 - [ERROR] - 500 POST /generate_document (127.0.0.1) 3.00ms
+2023-05-03 23:35:14,243 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-03 23:35:14,244 - [ERROR] - 500 POST /generate_document (127.0.0.1) 4.01ms
+2023-05-04 13:59:41,067 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 14, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 19, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-04 13:59:41,073 - [ERROR] - 500 POST /generate_document (127.0.0.1) 11.98ms
+2023-05-04 14:02:39,874 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 20, in post
+    self.write({'status': 'error', 'message': ex})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type KeyError is not JSON serializable
+2023-05-04 14:02:39,972 - [ERROR] - 500 POST /generate_document (127.0.0.1) 98.47ms
+2023-05-04 14:08:49,542 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 20, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-04 14:08:49,546 - [ERROR] - 500 POST /generate_document (127.0.0.1) 5.01ms
+2023-05-04 14:09:46,086 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 20, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-04 14:09:46,087 - [ERROR] - 500 POST /generate_document (127.0.0.1) 1.10ms
+2023-05-04 14:10:30,138 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.99ms
+2023-05-04 14:11:40,270 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.62ms
+2023-05-04 14:12:40,765 - [INFO] - 200 POST /generate_document (127.0.0.1) 0.54ms
+2023-05-04 14:18:13,458 - [INFO] - 200 POST /generate_document (127.0.0.1) 0.99ms
+2023-05-04 17:20:42,020 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.79ms
+2023-05-04 17:28:36,787 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.06ms
+2023-05-06 16:27:12,537 - [INFO] - 200 GET /get-file (::1) 1.00ms
+2023-05-06 16:27:16,473 - [WARNING] - 404 GET /get-file/1 (::1) 1.00ms
+2023-05-06 16:27:43,810 - [WARNING] - 404 GET /get-file/1 (::1) 1.00ms
+2023-05-06 16:27:57,787 - [WARNING] - 404 GET /get-file/1 (::1) 1.99ms
+2023-05-06 16:28:00,652 - [WARNING] - 404 GET /get-file/1 (::1) 0.00ms
+2023-05-06 16:51:35,230 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 17, in get
+    test_file = open("../heh_draft.docx", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '../heh_draft.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 21, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:51:35,232 - [ERROR] - 500 GET /get-file (::1) 3.00ms
+2023-05-06 16:52:32,673 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 17, in get
+    test_file = open("../heh_draft.docx", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '../heh_draft.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 21, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:52:32,674 - [ERROR] - 500 GET /get-file (::1) 2.03ms
+2023-05-06 16:52:53,605 - [INFO] - 200 GET /get-file (::1) 1.00ms
+2023-05-06 16:53:09,704 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 17, in get
+    test_file = open("../heh_draft.docx", "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '../heh_draft.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 21, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:53:09,707 - [ERROR] - 500 GET /get-file (::1) 3.00ms
+2023-05-06 16:53:09,900 - [WARNING] - 404 GET /favicon.ico (::1) 1.00ms
+2023-05-06 16:55:38,697 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 17, in get
+    test_file = open("../heh_draft.docx", "rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '../heh_draft.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 24, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:55:38,699 - [ERROR] - 500 GET /get-file (::1) 1.99ms
+2023-05-06 16:56:02,752 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 17, in get
+    test_file = open("../heh_draft.docx", "rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: '../heh_draft.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 25, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:56:02,754 - [ERROR] - 500 GET /get-file (::1) 2.00ms
+2023-05-06 16:56:17,870 - [INFO] - 200 GET /get-file (::1) 1.00ms
+2023-05-06 16:56:30,078 - [INFO] - 200 GET /get-file (::1) 2.00ms
+2023-05-06 16:57:27,766 - [ERROR] - Uncaught exception GET /get-file (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 22, in get
+    self.write({'status': 'SUCCESS', 'file': test_file})
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 920, in write
+    chunk = escape.json_encode(chunk)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\escape.py", line 75, in json_encode
+    return json.dumps(value).replace("</", "<\\/")
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 26, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 16:57:27,768 - [ERROR] - 500 GET /get-file (::1) 3.99ms
+2023-05-06 16:57:49,152 - [INFO] - 200 GET /get-file (::1) 1.01ms
+2023-05-06 16:57:55,965 - [INFO] - 304 GET /get-file (::1) 0.00ms
+2023-05-06 17:01:09,011 - [INFO] - 200 GET /get-file (::1) 1.00ms
+2023-05-06 17:01:12,449 - [WARNING] - 404 GET /get-file/1 (::1) 1.00ms
+2023-05-06 17:01:37,794 - [WARNING] - 404 GET /get-file/1 (::1) 1.00ms
+2023-05-06 17:03:33,705 - [WARNING] - 404 GET /get-file/ (::1) 1.01ms
+2023-05-06 17:03:38,836 - [WARNING] - 404 GET /get-file/ (::1) 0.99ms
+2023-05-06 17:03:55,146 - [WARNING] - 404 GET /get-file- (::1) 2.00ms
+2023-05-06 17:03:58,002 - [WARNING] - 404 GET /get-file (::1) 1.00ms
+2023-05-06 17:04:05,973 - [WARNING] - 404 GET /get-file-1 (::1) 1.00ms
+2023-05-06 17:04:15,341 - [WARNING] - 404 GET /get-file-%7Bpath_args%7D (::1) 0.00ms
+2023-05-06 17:04:35,849 - [INFO] - 200 GET /get-file&p (::1) 2.00ms
+2023-05-06 17:04:57,799 - [INFO] - 200 GET /get-file&k (::1) 2.01ms
+2023-05-06 17:05:45,629 - [INFO] - 200 GET /get-file?heh=heh (::1) 2.01ms
+2023-05-06 17:07:11,178 - [INFO] - 200 GET /get-file?atId=1 (::1) 1.00ms
+2023-05-06 17:07:49,070 - [INFO] - 200 GET /get-file?atId=1 (::1) 1.00ms
+2023-05-06 17:14:50,336 - [INFO] - 200 GET /get-file?atId=1 (::1) 2.00ms
+2023-05-06 17:15:26,592 - [INFO] - 200 GET /get-file (::1) 1.01ms
+2023-05-06 17:15:35,140 - [INFO] - 200 GET /get-file?atId=1 (::1) 0.99ms
+2023-05-06 17:16:06,787 - [INFO] - 200 GET /get-file?atId=1 (::1) 1.00ms
+2023-05-06 17:17:47,116 - [INFO] - 200 GET /get-file?id=1 (::1) 0.99ms
+2023-05-06 17:18:14,117 - [ERROR] - Uncaught exception GET /get-file?id=1 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file?id=1', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 12, in get
+    print(int (self.request.arguments.get("id")))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2023-05-06 17:18:14,120 - [ERROR] - 500 GET /get-file?id=1 (::1) 3.00ms
+2023-05-06 17:18:33,430 - [INFO] - 200 GET /get-file?id=1 (::1) 1.00ms
+2023-05-06 17:18:46,913 - [INFO] - 200 GET /get-file?id=1 (::1) 0.99ms
+2023-05-06 17:20:43,687 - [INFO] - 200 GET /get-file?id=1 (::1) 3.00ms
+2023-05-06 18:04:14,139 - [INFO] - 200 GET /get-file?id=1 (127.0.0.1) 2.00ms
+2023-05-06 18:43:29,870 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\handler.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 12, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\handler.py", line 20, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 18:43:29,881 - [ERROR] - 500 POST /generate_document (127.0.0.1) 16.46ms
+2023-05-06 18:52:24,998 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\generate_file.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 13, in generate
+    if not os.path.exists("samples" + '/' + response['user']['username']):
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\generate_file.py", line 20, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 18:52:25,001 - [ERROR] - 500 POST /generate_document (127.0.0.1) 3.91ms
+2023-05-06 18:53:00,782 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\generate_file.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 13, in generate
+    if not os.path.exists("samples" + '/' + response['techAssigmentId']):
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\generate_file.py", line 20, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 18:53:00,785 - [ERROR] - 500 POST /generate_document (127.0.0.1) 3.80ms
+2023-05-06 18:53:58,163 - [ERROR] - Uncaught exception POST /generate_document (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='POST', uri='/generate_document', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\generate_file.py", line 15, in post
+    generate(body_json_dict)
+  File "C:\programming\Kursach\DocumentGenearator\logic\document_creator.py", line 13, in generate
+    if not os.path.exists("samples" + '/' + response['techAssigmentId']):
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\generate_file.py", line 21, in post
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-06 18:53:58,166 - [ERROR] - 500 POST /generate_document (127.0.0.1) 3.36ms
+2023-05-06 18:55:11,554 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.14ms
+2023-05-06 18:55:38,660 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.08ms
+2023-05-06 18:56:25,202 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.11ms
+2023-05-06 19:33:46,487 - [INFO] - 200 POST /generate_document (127.0.0.1) 1.99ms
+2023-05-06 19:34:07,204 - [INFO] - 200 POST /generate_document (127.0.0.1) 2323.04ms
+2023-05-06 19:34:25,418 - [INFO] - 200 POST /generate_document (127.0.0.1) 2253.82ms
+2023-05-06 19:35:37,040 - [INFO] - 200 POST /generate_document (127.0.0.1) 2275.11ms
+2023-05-06 19:36:00,141 - [INFO] - 200 POST /generate_document (127.0.0.1) 2259.94ms
+2023-05-07 00:34:54,568 - [ERROR] - Uncaught exception GET /get-file?id=1 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file?id=1', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 15, in get
+    test_file = open(f"samples/{int(self.request.arguments.get('id')[0])}.docx", "rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: 'samples/1.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 20, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-07 00:34:54,647 - [ERROR] - 500 GET /get-file?id=1 (::1) 111.13ms
+2023-05-07 00:35:05,334 - [INFO] - 200 GET /get-file?id=12 (::1) 75.38ms
+2023-05-07 00:45:42,932 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 1.99ms
+2023-05-07 00:52:43,460 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 2.00ms
+2023-05-07 00:54:05,116 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 1.00ms
+2023-05-07 00:55:26,717 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 2.95ms
+2023-05-07 00:57:48,527 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 2.81ms
+2023-05-07 01:04:09,348 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 1.63ms
+2023-05-07 01:06:44,126 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 2.00ms
+2023-05-07 01:13:04,631 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 1.00ms
+2023-05-07 01:18:41,153 - [INFO] - 200 GET /get-file?id=12 (127.0.0.1) 2.00ms
+2023-05-07 12:37:01,709 - [INFO] - 200 POST /generate_document (127.0.0.1) 2326.89ms
+2023-05-07 13:01:39,564 - [INFO] - 200 POST /generate_document (127.0.0.1) 2303.23ms
+2023-05-07 13:25:34,325 - [INFO] - 200 POST /generate_document (127.0.0.1) 1619.47ms
+2023-05-07 13:26:13,365 - [ERROR] - Uncaught exception GET /get-file?id=12 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file?id=12', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 15, in get
+    test_file = open(f"samples/{int(self.request.arguments.get('id')[0])}.docx", "rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: 'samples/12.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 20, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-07 13:26:13,448 - [ERROR] - 500 GET /get-file?id=12 (127.0.0.1) 82.20ms
+2023-05-07 13:26:19,705 - [ERROR] - Uncaught exception GET /get-file?id=12 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8085', method='GET', uri='/get-file?id=12', version='HTTP/1.1', remote_ip='127.0.0.1')
+Traceback (most recent call last):
+  File "handlers\get_file.py", line 15, in get
+    test_file = open(f"samples/{int(self.request.arguments.get('id')[0])}.docx", "rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: 'samples/12.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 1786, in _execute
+    result = await result
+  File "handlers\get_file.py", line 20, in get
+    self.write(ex)
+  File "C:\Users\bagrc\AppData\Local\Programs\Python\Python38\lib\site-packages\tornado\web.py", line 918, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2023-05-07 13:26:19,706 - [ERROR] - 500 GET /get-file?id=12 (127.0.0.1) 1.04ms
+2023-05-07 13:27:06,553 - [INFO] - 200 GET /get-file?id=15 (127.0.0.1) 12.02ms
+2023-05-07 14:18:14,499 - [INFO] - 200 GET /get-file?id=15 (127.0.0.1) 1.99ms

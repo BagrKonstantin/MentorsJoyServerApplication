@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  mentors_joy_data_base:
+    #container_name: mentors_joy_postgres_container
+    image: bagrkonstantin/mentors-joy:postgres_db
+    environment:
+      POSTGRES_DB: MentorsJoyDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pQwfHrEabbmmlp12ka
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - "5435:5432"
+
+  mentors_joy_generator:
+    image: bagrkonstantin/mentors-joy:generator
+#    build: generator
+    environment:
+      PORT: 8085
+    ports:
+      - "8085:8085"
+
+  mentors_joy_rest_api:
+    #container_name: mentors_joy_rest_api_container
+
+#    build:
+#        context: .
+    image: bagrkonstantin/mentors-joy:api
+    depends_on:
+      - mentors_joy_data_base
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://mentors_joy_data_base:5432/MentorsJoyDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: pQwfHrEabbmmlp12ka
+      SERVER_PORT: 8081
+      MENTORSJOY_APP_JWTSECRET: bezKoderSecretKey
+      MENTORSJOY_APP_JWTEXPIRATIONMS: 86400000
+      MENTORSJOY_GENERATOR_ADDRESS: http://mentors_joy_generator:8085
+
+
+    ports:
+      - "8081:8081"

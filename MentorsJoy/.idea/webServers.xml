@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="699a7201-295c-4ca3-b5bd-68f3110e6614" name="mentorsjoy">
+        <fileTransfer rootFolder="/home/dshvetsov/voronka" accessType="SFTP" host="158.160.13.158" port="22" sshConfigId="09c86d82-7844-4a52-8769-4c52c3f78254" sshConfig="dshvetsov@158.160.13.158:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
