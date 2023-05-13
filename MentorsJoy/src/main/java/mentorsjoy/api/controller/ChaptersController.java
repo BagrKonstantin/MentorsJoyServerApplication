@@ -14,10 +14,10 @@ import java.util.List;
 public class ChaptersController {
 
     @Autowired
-    ChaptersService chaptersService;
+    private ChaptersService chaptersService;
 
     @GetMapping(path="/get-all-chapters")
-    public List<Chapters> get() {
+    public List<Chapters> getAllChapters() {
         return chaptersService.getAllChapters();
     }
 }

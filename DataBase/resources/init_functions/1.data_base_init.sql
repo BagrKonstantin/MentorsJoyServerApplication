@@ -3,7 +3,6 @@ CREATE SCHEMA documents;
 CREATE SCHEMA extra;
 CREATE SCHEMA classificatory;
 CREATE SCHEMA settings;
-CREATE SCHEMA test;
 
 
 
@@ -15,13 +14,6 @@ CREATE TABLE settings.roles
     CONSTRAINT roles_pk PRIMARY KEY (role_id)
 );
 
--- CREATE TABLE test.user2 (
---     user_id int8,
---     email varchar(50),
---
---     CONSTRAINT user2_pk PRIMARY KEY (user_id)
---
--- );
 
 
 CREATE TABLE extra.person

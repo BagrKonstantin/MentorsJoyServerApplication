@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
-import mentorsjoy.api.security.services.UserDetailsServiceImpl;
+import mentorsjoy.api.service.UserDetailsServiceImpl;
 
 import java.io.IOException;
 

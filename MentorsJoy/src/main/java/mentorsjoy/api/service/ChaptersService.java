@@ -12,6 +12,8 @@ public class ChaptersService {
     @Autowired
     private ChaptersRepository chaptersRepository;
 
+
+
     public List<Chapters> getAllChapters() {
         return chaptersRepository.findAll();
     }
