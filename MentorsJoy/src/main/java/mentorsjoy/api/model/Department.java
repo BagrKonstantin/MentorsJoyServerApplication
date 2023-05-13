@@ -27,13 +27,10 @@ public class Department {
     public String getTitle() {
         return title;
     }
-//
+
     @JsonIgnore
     public String getFaculty() {
         return faculty.getTitle();
     }
 
-//    public void setFaculty(Faculty faculty) {
-//        this.faculty = faculty;
-//    }
 }

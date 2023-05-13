@@ -1,0 +1,49 @@
+
+\
+java:S1192>"FDefine a constant instead of duplicating this literal "error" 4 times.(Ûâ•é
+:
+java:S1640="Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+:
+java:S1640B"Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+:
+java:S1640K"Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+:
+java:S1640Q"Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+:
+java:S1640W"Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+:
+java:S1640^"Convert this Map to an EnumMap.(´®ú¼üÿÿÿÿ
+f
+java:S36558"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ý®Ù®
+f
+java:S36557"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÖÄÃè
+k
+java:S3655)"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ê£ý–ùÿÿÿÿ
+k
+java:S3655,"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(€‘µ©ÿÿÿÿÿ
+f
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²À¼Â
+G
+java:S3599=",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171="YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ
+G
+java:S3599B",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171B"YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ
+G
+java:S3599K",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171K"YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ
+G
+java:S3599Q",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171Q"YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ
+G
+java:S3599W",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171W"YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ
+G
+java:S3599^",Use another way to initialize this instance.(´®ú¼üÿÿÿÿ
+t
+java:S1171^"YMove the contents of this initializer to a standard constructor or to field initializers.(´®ú¼üÿÿÿÿ

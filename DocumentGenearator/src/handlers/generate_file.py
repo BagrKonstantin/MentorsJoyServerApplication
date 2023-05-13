@@ -18,5 +18,3 @@ class Handler(BaseHandler, ABC):
             print(ex)
             self.set_status(500)
             self.write(ex)
-
-

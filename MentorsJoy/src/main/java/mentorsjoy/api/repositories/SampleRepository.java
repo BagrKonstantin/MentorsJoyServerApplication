@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface SampleRepository extends JpaRepository<Sample, Long> {
     @Query("SELECT sample FROM Sample sample WHERE sample.user.userId=:userId AND sample.deleted=FALSE")
-    public List<Sample> findAllByUserId(@Param("userId") Long userId);
+     List<Sample> findAllByUserId(@Param("userId") Long userId);
 }

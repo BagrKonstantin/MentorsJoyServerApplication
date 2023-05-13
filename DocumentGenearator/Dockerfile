@@ -5,8 +5,9 @@ RUN mkdir gen
 COPY requirements.txt gen/requirements.txt
 RUN pip install -r gen/requirements.txt
 
-ADD /src /gen/src
 COPY server.py /gen/server.py
+ADD /src /gen/src
+
 WORKDIR /gen
 
 ENV PORT: 8085

@@ -16,14 +16,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import mentorsjoy.api.security.jwt.AuthEntryPointJwt;
 import mentorsjoy.api.security.jwt.AuthTokenFilter;
-import mentorsjoy.api.security.services.UserDetailsServiceImpl;
+import mentorsjoy.api.service.UserDetailsServiceImpl;
 
 
 @Configuration
 @EnableMethodSecurity
 public class WebSecurityConfig {
     @Autowired
-    UserDetailsServiceImpl userDetailsService;
+    private UserDetailsServiceImpl userDetailsService;
 
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
@@ -55,13 +55,10 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        //http.csrf().disable().authorizeHttpRequests().anyRequest().permitAll();
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeHttpRequests().requestMatchers("/api/auth/**").permitAll()
-//                .requestMatchers("/api/test/**").permitAll()
-//                .requestMatchers("/api/app/**").permitAll()
                 .anyRequest().authenticated();
 
         http.authenticationProvider(authenticationProvider());

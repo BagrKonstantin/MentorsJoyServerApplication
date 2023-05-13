@@ -13,10 +13,10 @@ import java.util.List;
 @RequestMapping("api/extra")
 public class FacultyController {
     @Autowired
-    FacultyService facultyService;
+    private FacultyService facultyService;
 
     @GetMapping(path="/get-all-faculties")
-    public List<Faculty> get() {
+    public List<Faculty> getAllFaculties() {
         return facultyService.getAllFaculties();
     }
 

@@ -1,8 +1,7 @@
 package mentorsjoy.api.controller;
 
 import mentorsjoy.api.model.User;
-import mentorsjoy.api.repositories.UserRepository;
-import mentorsjoy.api.security.services.UserDetailsImpl;
+import mentorsjoy.api.security.UserDetailsImpl;
 import mentorsjoy.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,7 +17,7 @@ import org.springframework.security.core.Authentication;
 public class JwtTestController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @GetMapping("/all")
     public String allAccess() {

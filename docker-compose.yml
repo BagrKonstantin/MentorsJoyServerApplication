@@ -31,6 +31,5 @@ services:
       MENTORSJOY_APP_JWTEXPIRATIONMS: ${JWT_TOKEN_EXP}
       MENTORSJOY_GENERATOR_ADDRESS: http://mentors_joy_generator:${GENERATOR_PORT_DOCKER}
 
-
     ports:
       - "${API_PORT_PUBLIC}:${API_PORT_DOCKER}"
